@@ -1,0 +1,95 @@
+.secao-contato {
+  background-color: var(--cor-contato-fundo); 
+  padding: var(--espacamento-grande) var(--espacamento-medio); 
+  border-radius: var(--border-radius); 
+  color: var(--cor-contraste-branco);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.contato-flex {
+  background-color: var(--cor-contato-fundo);
+  border: 7.5px solid var(--cor-borda-contato);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.titulo-contato {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--cor-contraste-branco);
+  margin-bottom: var(--espacamento-medio);
+}
+
+.info-contato {
+  text-align: center;
+  margin-top: var(--espacamento-pequeno);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--cor-contraste-branco);
+  width: 100%;
+  padding: var(--espacamento-pequeno);
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.info-contato p {
+  margin-bottom: 8px;
+}
+
+.info-contato p strong {
+  color: var(--cor-contraste-branco);
+}
+
+.info-contato p strong,
+.info-contato p span {
+  display: inline-block;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  background-color: rgba(138, 108, 73, 0.99); /* valor específico */
+  border: 5px solid var(--cor-borda-contato);
+  border-radius: 25px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  color: var(--cor-contraste-branco);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+  color: var(--cor-contraste-branco);
+}
+
+.formulario-contato button {
+  background-color: var(--cor-card-fundo);
+  color: var(--cor-bordo);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.formulario-contato button:hover {
+  background-color: var(--cor-verde);
+  color: var(--cor-hover);
+  border: 5px solid var(--cor-hover);
+}

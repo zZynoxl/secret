@@ -1,0 +1,54 @@
+.secao-conteudo {
+  margin-bottom: 100px;
+}
+
+.secao-conteudo .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.caixa-conteudo {
+  background-color: var(--cor-conteudo-fundo); 
+  border-radius: var(--border-radius);
+  box-shadow: var(--caixa-shadow);
+  padding: 80px 30px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.titulo-conteudo {
+  background-color: var(--cor-fundo-conteudo);
+  font-family: 'Gluten', cursive;
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--cor-contraste-branco);
+  padding: 12px 24px;
+  border-radius: calc(var(--border-radius) * 0.75);
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--caixa-shadow);
+}
+
+.texto-conteudo {
+  margin-top: 4rem;
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--cor-contraste-branco);
+}
+
+/* Reforçando consistência visual */
+.titulo-conteudo,
+.titulo-sabores {
+  background-color: var(--cor-fundo-conteudo);
+}
+
+.caixa-sabores {
+  background-color: rgba(130, 98, 74, 0.38); /* Manter como exceção por ser efeito específico/transparente */
+}

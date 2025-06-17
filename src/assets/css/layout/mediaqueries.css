@@ -1,0 +1,289 @@
+/* TELAS MAIORES (mínimo 768px) */
+@media (min-width: 768px) {
+  .contato-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contato-info,
+  .formulario-area {
+    flex: 1;
+    width: 100%;
+  }
+
+  .contato-info {
+    padding: 0 var(--espacamento-medio);
+    padding-right: 40px;
+    overflow-wrap: break-word;
+  }
+
+  .formulario-area {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-button {
+    display: none;
+  }
+
+  .header-list {
+    display: flex !important;
+    position: static;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    width: auto;
+    opacity: 1;
+    transform: none;
+  }
+
+  .header-list-item a {
+    padding: 0 var(--espacamento-pequeno);
+  }
+}
+
+/* TELAS MÉDIAS (máximo 1024px) */
+@media (max-width: 1024px) {
+  .banner {
+    background: url("../../images/banner1024.jpeg") center/cover no-repeat;
+    height: calc(80vh - 5px);
+    min-height: 475px;
+  }
+
+  #inicio .local {
+    margin-top: 12rem;
+  }
+
+  .cards-container {
+    padding-inline: var(--espacamento-grande);
+    justify-content: center;
+    margin-top: 135px;
+  }
+
+  .card-prato {
+    width: 45%;
+  }
+   .contador-de-tempo {
+    height: auto;
+    padding: 20px 15px;
+    background-attachment: scroll; 
+    width: 90%;
+    background-position: center;
+  }
+
+  .contador-de-tempo h2 {
+    font-size: 2rem;
+  }
+
+  .contador-de-tempo h3 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contador {
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .contador-digital-numero {
+    font-size: 2.8rem;
+  }
+
+  .contador-digital-label {
+    font-size: 0.9rem;
+  }
+
+  .fogos-container {
+    max-width: 160px;
+    height: 100px;
+  }
+
+  #simular {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+  .contato-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contato-info,
+  .formulario-area,
+  .formulario-contato {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* TELAS PEQUENAS (máximo 768px) */
+@media (max-width: 768px) {
+  .banner {
+    background: url("../../images/banner768.jpeg") center/cover no-repeat;
+    height: calc(80vh - 5px);
+    min-height: 475px;
+  }
+
+  #inicio h2 {
+    font-size: 1.8rem;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+  }
+
+  #inicio .local {
+    margin-top: 18rem;
+  }
+
+  .scroll-button {
+    font-size: 1.8rem;
+  }
+
+  .caixa-conteudo {
+    padding: 40px var(--espacamento-pequeno);
+    width: 100%;
+  }
+
+  .titulo-conteudo {
+    font-size: 2.5rem;
+  }
+
+  .texto-conteudo {
+    font-size: 1.5rem;
+  }
+
+  .cards-container {
+    padding-inline: var(--espacamento-pequeno);
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .card-prato {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .titulo-prato {
+    font-size: 32px;
+  }
+
+  .descricao-prato {
+    font-size: 18px;
+  }
+
+  .contato-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contato-info,
+  .formulario-area,
+  .formulario-contato {
+    padding: 0;
+    width: 100%;
+  }
+
+  .header-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-list.show {
+    display: flex;
+  }
+  .header-button {
+    display: block;
+  }
+
+  .menu-acessibilidade {
+    top: calc(var(--espacamento-grande) * 12);
+    right: var(--espacamento-medio);
+  }
+
+  .btn-acessibilidade {
+    width: var(--tamanho-botao-responsivo);
+    height: var(--tamanho-botao-responsivo);
+  }
+
+  .opcoes-acessibilidade {
+    min-width: 160px;
+  }
+}
+
+/* TELAS MUITO PEQUENAS (máximo 480px) */
+@media (max-width: 480px) {
+  .banner {
+    background: url("../../images/banner320.jpeg") center/cover no-repeat;
+    height: calc(65vh - 4px);
+    min-height: 386px;
+    border-radius: calc(var(--border-radius) * 0.6);
+  }
+
+  #inicio h2 {
+    font-size: 1.5rem;
+  }
+
+  #inicio p {
+    font-size: 0.9rem;
+  }
+
+  #inicio .local {
+    margin-top: 17.5rem;
+  }
+
+  .scroll-button {
+    font-size: 1.5rem;
+    bottom: 25px;
+  }
+
+  .caixa-conteudo {
+    padding: 40px 15px;
+  }
+
+  .titulo-conteudo {
+    font-size: 2rem;
+  }
+
+  .texto-conteudo {
+    font-size: 1.25rem;
+  }
+
+  .cards-container {
+    padding-inline: 10px;
+  }
+
+  .titulo-prato {
+    font-size: 28px;
+  }
+
+  .descricao-prato {
+    font-size: 16px;
+  }
+
+  .titulo-contato {
+    font-size: 1.5em;
+  }
+
+  .info-contato p {
+    font-size: 1em;
+  }
+
+  .contato-info form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contato-info input,
+  .contato-info textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

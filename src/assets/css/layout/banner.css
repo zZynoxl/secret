@@ -1,0 +1,90 @@
+:root {
+  --border-radius-medio: 8px;
+}
+
+/* Estilos do container geral e do banner */
+.banner {
+  background: url("../../images/banner1.jpeg") center/cover no-repeat;
+  height: calc(100vh - 6px);
+  min-height: 594px;
+  margin: 7px 10px 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--caixa-sombra);
+  width: calc(100% - 20px);
+  position: relative;
+}
+
+#inicio::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--cor-contraste-branco);
+  padding: var(--espacamento-medio);
+  position: relative;
+}
+
+#inicio .container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+#inicio h2,
+#inicio p {
+  text-shadow: var(--texto-sombra);
+  margin-bottom: var(--espacamento-pequeno);
+}
+
+#inicio h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: bold;
+  margin-bottom: var(--espacamento-medio);
+}
+
+#inicio p {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  font-weight: 200;
+}
+
+#inicio .local {
+  margin-top: 20rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(255, 246, 218, 0.2);
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 246, 218, 0.3);
+}
+
+.scroll-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  color: var(--cor-contraste-branco);
+  font-size: 2rem;
+  cursor: pointer;
+  animation: up-and-down 2s infinite;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.scroll-button:hover {
+  color: var(--cor-verde);
+}

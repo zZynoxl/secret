@@ -1,0 +1,18 @@
+.lista-regras {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-regras li {
+  border-radius: var(--border-radius-medio);
+  padding: var(--espacamento-medio) var(--espacamento-grande);
+  margin-bottom: var(--espacamento-pequeno);
+  box-shadow: var(--sombra-leve);
+  transition: var(--transition);
+}
+
+.lista-regras li:hover {
+  background-color: var(--cor-verde);
+  cursor: default;
+}

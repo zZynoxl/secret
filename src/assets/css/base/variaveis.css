@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Cores principais */
+  --cor-primaria: #2c3e50;
+  --cor-secundaria: #1a252f;
+  --cor-fundo: #f8f9fa;
+  --cor-texto: #212529;
+  --cor-borda: #dee2e6;
+  --cor-hover: #e9ecef;
+  --cor-verde: #3a6b35;
+  --cor-verde-neon: #39FF14;
+  --cor-azul: #2271B3;
+  --cor-laranja: #d9822b;
+  --cor-bordo: #67220b;
+  --cor-vermelho: rgb(255, 0, 0);
+  --cor-fundo-claro: #fff8f0;
+  --cor-fundo-conteudo: #B3824A;
+  --cor-card-fundo: #F5E7B7;
+  --cor-borda-contato: #F5E4C9;
+  --cor-contato-fundo: #8C6F46F5;
+  --cor-conteudo-fundo: #c9af7f;
+  --cor-fogo1-inicio: #ff8000;
+  --cor-fogo1-fim: #ffd700;
+  --cor-fogo2-inicio: #ffaa00;
+  --cor-fogo2-fim: #ffee99;
+  --cor-fogo3-inicio: #ff9a00;
+  --cor-fogo3-fim: #ffec8b;
+
+
+  /* Cores de contraste */
+  --cor-contraste-fundo: #000000;
+  --cor-contraste-branco: #ffffff;
+  --cor-contraste-destaque: #ffff00;
+  --cor-contraste-borda: rgba(255, 191, 0, 0.932);
+  --cor-contraste-hover: #333333;
+  --cor-fundo-escuro: #1a1a1a;
+
+
+  /* Sombras */
+  --sombra-leve: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --sombra-media: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --texto-sombra: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  --caixa-sombra: 0 4px 15px rgba(0, 0, 0, 0.25);
+  --sombra-fogo: 0 0 10px #ffb347, 0 0 20px #ffcc33;
+
+  /* Espaçamentos */
+  --espacamento-pequeno: 0.5rem;
+  --espacamento-medio: 1rem;
+  --espacamento-grande: 1.5rem;
+
+  /* Tamanhos de botão */
+  --tamanho-botao: 3rem;
+  --tamanho-botao-responsivo: 2.8rem;
+
+  /* outros */
+  --transition: all 0.3s ease;
+  --border-radius: 16px;
+  --border-radius-medio: 8px;
+
+}

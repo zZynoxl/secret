@@ -1,0 +1,225 @@
+/* SEÇÃO: CONTADOR DE TEMPO */
+
+.contador-de-tempo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../../images/Gemini-Generated-Image-campo-cidade-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 50px auto;
+  padding: 30px;
+  width: 75%;
+  height: 600px;
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contador-de-tempo h2 {
+  font-size: 2.5rem;
+  color: var(--cor-contraste-branco);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.contador-de-tempo h2 span {
+  color: var(--cor-verde-neon);
+}
+
+.contador-de-tempo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-contraste-branco);
+  margin-top: 30px; 
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* BLOCO: DIGITOS DO CONTADOR */
+
+.contador {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contador-digital {
+  text-align: center;
+  min-width: 80px;
+}
+
+.contador-digital-numero {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--cor-verde-neon);
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.evento-ativo .contador-digital-numero {
+  color: var(--cor-vermelho);
+}
+
+.contador-digital-label {
+  font-size: 1rem;
+  color: var(--cor-contraste-branco);
+  margin-top: 5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ANIMAÇÃO DE FOGOS */
+
+.fogos-container {
+  position: relative;
+  max-width: 200px;
+  height: 120px;
+  margin: 30px auto 10px auto;
+}
+
+.fogos-container .fogos {
+  position: absolute;
+  bottom: 20%;
+  border-radius: 20px;
+  animation: fogo-flare 1.5s ease-in-out infinite alternate;
+  opacity: 0.9;
+  z-index: 1;
+  box-shadow: var(--sombra-fogo);
+}
+
+/* Fogo 1 */
+.fogos-container .fogos:nth-child(1) {
+  left: 25%;
+  width: 14%;
+  height: 60%;
+  animation-delay: 0.2s;
+  background: linear-gradient(to top, var(--cor-fogo1-inicio), var(--cor-fogo1-fim));
+}
+
+/* Fogo 2 */
+.fogos-container .fogos:nth-child(2) {
+  left: 45%;
+  width: 14%;
+  height: 65%;
+  animation-delay: 0.4s;
+  background: linear-gradient(to top, var(--cor-fogo2-inicio), var(--cor-fogo2-fim));
+}
+
+/* Fogo 3 */
+.fogos-container .fogos:nth-child(3) {
+  left: 65%;
+  width: 13%;
+  height: 58%;
+  animation-delay: 0.6s;
+  background: linear-gradient(to top, var(--cor-fogo3-inicio), var(--cor-fogo3-fim));
+}
+
+/* Base da fogueira (imagem de lenha) */
+.fogos-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/lenhateste1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* BOTÃO DE SIMULAÇÃO */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#simular {
+  background-color: var(--cor-azul);
+  color: var(--cor-contraste-branco);
+  border-radius: var(--border-radius);
+  border: 1.5px solid var(--cor-contraste-branco);
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#simular:active {
+  transform: scale(0.95);
+}
+
+/* ANIMAÇÃO DE FOGOS */
+
+.fogos-container {
+  position: relative;
+  max-width: 200px;
+  height: 120px;
+  margin: 20px auto;
+}
+
+.fogos-container .fogos {
+  position: absolute;
+  bottom: 20%;
+  border-radius: 20px;
+  animation: fogo-flare 1.5s ease-in-out infinite alternate;
+  opacity: 0.9;
+  z-index: 1;
+  box-shadow: var(--sombra-fogo);
+}
+
+/* Fogo 1 */
+.fogos-container .fogos:nth-child(1) {
+  left: 25%;
+  width: 14%;
+  height: 60%;
+  animation-delay: 0.2s;
+  background: linear-gradient(to top, var(--cor-fogo1-inicio), var(--cor-fogo1-fim));
+}
+
+/* Fogo 2 */
+.fogos-container .fogos:nth-child(2) {
+  left: 45%;
+  width: 14%;
+  height: 65%;
+  animation-delay: 0.4s;
+  background: linear-gradient(to top, var(--cor-fogo2-inicio), var(--cor-fogo2-fim));
+}
+
+/* Fogo 3 */
+.fogos-container .fogos:nth-child(3) {
+  left: 65%;
+  width: 13%;
+  height: 58%;
+  animation-delay: 0.6s;
+  background: linear-gradient(to top, var(--cor-fogo3-inicio), var(--cor-fogo3-fim));
+}
+
+/* Base da fogueira (imagem de lenha) */
+.fogos-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/lenhateste1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  z-index: 2;
+  pointer-events: none;
+}

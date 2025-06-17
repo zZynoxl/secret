@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="FRANCESCO VIEIRA DOS SANTOS">
+    <title>1º Festival Gastronômico Campo na Cidade</title>
+
+    <meta name="description"
+        content="Festival que celebra a conexão entre produtores rurais e a gastronomia urbana em Curitiba">
+    <meta name="keywords" content="Agrinho, Agrinho-2025">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Meta para redes sociais -->
+    <meta property="og:title" content="1º Festival Gastronômico | Sabores do Campo na Cidade">
+    <meta property="og:description"
+        content="Festival que celebra a conexão entre produtores rurais e a gastronomia urbana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seusite.com/"> <!-- Substituir pelo link real quando publicado -->
+    <meta property="og:image" content="https://www.seusite.com/src/assets/images/banner320.jpeg">
+    <!-- Substituir pelo caminho real -->
+
+    <!-- Favicon + links base -->
+    <link rel="icon" href="src/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="src/assets/images/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/css/main.css">
+</head>
+
+
+<body>
+    <header class="header" role="banner">
+        <img src="src/assets/images/logo-festival.png" alt="Logo do evento" class="logo" />
+        <div class="fogueira-container">
+            <img src="src/assets/images/lenha-fogueira.png" alt="imagem fogueira" class="fogueira-centro" />
+        </div>
+        <nav class="header-nav">
+            <button id="nav-button" class="header-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="nav-list" class="header-list">
+                <li class="header-list-item"><a href="#inicio" class="header-link">Início</a></li>
+                <li class="header-list-item"><a href="#proposta" class="header-link">Informações</a></li>
+                <li class="header-list-item"><a href="#contato" class="header-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu de Acessibilidade Inspirado na trilha: https://cursos.alura.com.br/course/acessibilidade-web-melhorando-experiencia-usuario -->
+
+    <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" class="btn-acessibilidade" aria-label="Menu de acessibilidade"
+            aria-expanded="false">
+            <i class="bi bi-universal-access"></i>
+        </button>
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
+            <button id="aumentar-fonte" class="btn-opcao" aria-label="Aumentar tamanho da fonte">
+                <i class="bi bi-zoom-in"></i> A+
+            </button>
+            <button id="diminuir-fonte" class="btn-opcao" aria-label="Diminuir tamanho da fonte">
+                <i class="bi bi-zoom-out"></i> A-
+            </button>
+            <button id="alterna-contraste" class="btn-opcao" aria-label="Alternar alto contraste">
+                <i class="bi bi-circle-half"></i> Contraste
+            </button>
+            <button id="reset-acessibilidade" class="btn-opcao" aria-label="Redefinir configurações">
+                <i class="bi bi-arrow-counterclockwise"></i> Resetar
+            </button>
+        </div>
+    </div>
+
+    <section id="inicio" class="banner">
+        <div class="container">
+            <p class="local">Curitiba-PR</p>
+            <a href="#contador" class="scroll-button">
+                <i class="bi bi-chevron-double-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <main id="main-content" role="main">
+
+        <!--  Contador-de-tempo Inspirado na trilha: https://cursos.alura.com.br/course/new-javascript-organizando-projeto-vida-matematica-aplicada -->
+
+        <section class="contador-de-tempo" id="contador">
+            <h2 id="titulo">1º Festival Gastronômico Sabores do Campo na Cidade<span>!</span></h2>
+            <h3 id="mensagem">CONTAGEM REGRESSIVA PARA O FESTIVAL</h3>
+
+            <div class="contador">
+                <div class="contador-digital">
+                    <p class="contador-digital-numero" id="days"></p>
+                    <p class="contador-digital-label">dias</p>
+                </div>
+                <div class="contador-digital">
+                    <p class="contador-digital-numero" id="hours"></p>
+                    <p class="contador-digital-label">horas</p>
+                </div>
+                <div class="contador-digital">
+                    <p class="contador-digital-numero" id="minutes"></p>
+                    <p class="contador-digital-label">min</p>
+                </div>
+                <div class="contador-digital">
+                    <p class="contador-digital-numero" id="seconds"></p>
+                    <p class="contador-digital-label">seg</p>
+                </div>
+            </div>
+            <div class="fogos-container" aria-hidden="true"></div>
+            <div class="button-container">
+                <button id="simular" class="btn btn-warning mt-3">Simular dia do Festival</button>
+            </div>
+
+        </section>
+
+
+
+        <section id="proposta" class="secao-conteudo secao-proposta">
+            <div class="container">
+                <div class="caixa-conteudo">
+                    <h2 class="titulo-conteudo">PROPOSTA</h2>
+                    <p class="texto-conteudo">
+                        Imagine o sabor do campo chegando até você, bem no coração da cidade. O 1º Festival Gastronômico
+                        “Sabores do Campo na Cidade” vai muito além de um simples evento — é uma celebração viva da
+                        conexão entre dois mundos que se completam: o rural e o urbano.
+
+                        De um lado, produtores locais trazendo o melhor da terra — ingredientes frescos, sazonais,
+                        cheios de autenticidade e história. Do outro, chefs urbanos criativos e apaixonados, que
+                        valorizam a origem de cada produto e transformam esses ingredientes em verdadeiras obras-primas
+                        da culinária.
+
+                        E o que será servido? Pratos típicos do interior do Paraná, preparados com alma e tradição,
+                        agora apresentados com novos toques e técnicas no coração da cidade. É a comida da roça ganhando
+                        novos espaços, encantando os paladares e despertando memórias afetivas em cada garfada.
+
+                        “Festejando a conexão entre campo e cidade” é mais do que um lema — é o propósito que guia cada
+                        detalhe deste festival. Um momento para vivenciar, provar, aprender e se encantar com os
+                        sabores, saberes e histórias que unem essas duas realidades.
+
+                        Quando o campo e a cidade se encontram em harmonia, nasce algo especial. Venha celebrar com a
+                        gente — porque quem ganha com essa união é todo mundo.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sabores-historia" class="secao-conteudo secao-sabores">
+            <div class="container">
+                <div class="caixa-conteudo caixa-sabores">
+                    <h3 class="titulo-conteudo titulo-sabores">Sabores com História</h3>
+                    <div class="cards-container">
+                        <!-- Barreado -->
+                        <div class="card card-prato">
+                            <h5 class="titulo-prato">BARREADO</h5>
+                            <!-- Substituir "foto/imagem?? por Nome do Autor via ?????" -->
+                            <img src="src/assets/images/barreado.png" class="img-prato" alt="Barreado"
+                                title="foto/imagem?? por Nome do Autor via ?????">
+                            <p class="descricao-prato">
+                                Um prato de carne cozida lentamente, geralmente com costelas de boi, acompanhado
+                                de pão, arroz e farinha de mandioca.
+                            </p>
+                            <a target="_blank" href="https://www.tudogostoso.com.br/receita/21782-barreado.html"
+                                class="btn btn-success text-white border border-success">
+                                <i class="bi bi-link-45deg"></i> Conheça a Receita
+                            </a>
+                        </div>
+
+                        <!-- Vaca Atolada -->
+                        <div class="card card-prato">
+                            <h5 class="titulo-prato">Vaca Atolada</h5>
+                            <!-- Substituir "foto/imagem?? por Nome do Autor via ?????" -->
+                            <img src="src/assets/images/vaca-atolada.jpg" class="img-prato" alt="Vaca atolada"
+                                title="foto/imagem?? por Nome do Autor via ?????">
+                            <p class="descricao-prato">
+                                Um prato com carne bovina, mandioca, linguiça e outros ingredientes, cozido em fogo
+                                baixo.
+                            </p>
+                            <a target="_blank"
+                                href="https://receitas.globo.com/regionais/rpc/receitas-paranaenses/receita-de-vaca-atolada-g.ghtml"
+                                class="btn btn-success text-white border border-success">
+                                <i class="bi bi-link-45deg"></i> Conheça a Receita
+                            </a>
+                        </div>
+
+                        <!-- Carne de Onça -->
+                        <div class="card card-prato">
+                            <h5 class="titulo-prato">CARNE DE ONÇA</h5>
+                            <!-- Substituir "foto/imagem?? por Nome do Autor via ?????" -->
+                            <img src="src/assets/images/carne-de-onca.jpeg" class="img-prato" alt="Carne de Onça"
+                                title="foto/imagem?? por Nome do Autor via ?????">
+                            <p class="descricao-prato">
+                                é um prato típico de Curitiba, feito com carne bovina crua bem temperada, servida sobre
+                                pão e finalizada com cebolinha. 
+                            </p>
+                            <a target="_blank" href="https://www.tudogostoso.com.br/receita/79606-carne-de-onca.html"
+                                class="btn btn-success text-white border border-success">
+                                <i class="bi bi-link-45deg"></i> Conheça a Receita
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cards-container mt-4">
+                        <!-- PÃO NO BAFO -->
+                        <div class="card card-prato">
+                            <h5 class="titulo-prato">PÃO NO BAFO</h5>
+                            <!-- Substituir "foto/imagem?? por Nome do Autor via ?????" -->
+                            <img src="src/assets/images/pao-no-bafo.jpg" class="img-prato" alt="Pão no bafo"
+                                title="foto/imagem?? por Nome do Autor via ?????">
+                            <p class="descricao-prato">
+                                Pão cozido no vapor, frequentemente com carne, um clássico dos Campos Gerais.
+                            </p>
+                            <a target="_blank"
+                                href="https://receitas.globo.com/regionais/rpc/bicho-do-parana/experimente-a-receita-de-pao-de-bafo-prato-tipico-do-parana.ghtml"
+                                class="btn btn-success text-white border border-success">
+                                <i class="bi bi-link-45deg"></i> Conheça a Receita
+                            </a>
+                        </div>
+
+                        <!-- BOLO DE PINHÃO -->
+                        <div class="card card-prato">
+                            <h5 class="titulo-prato">BOLO DE PINHÃO</h5>
+                            <!-- Substituir "foto/imagem?? por Nome do Autor via ?????" -->
+                            <img src="src/assets/images/bolo-de-pinhao.png" class="img-prato" alt="Bolo de Pinhão"
+                                title="foto/imagem?? por Nome do Autor via ?????">
+                            <p class="descricao-prato">
+                                Bolo de Pinhão: Bolo feito com pinhões cozidos e moídos, farinha de trigo, açúcar, ovos
+                                e manteiga. 
+                            </p>
+                            <a target="_blank" href="https://receitas.globo.com/regionais/rpc/plug/bolo-de-pinhao.ghtml"
+                                class="btn btn-success text-white border border-success">
+                                <i class="bi bi-link-45deg"></i> Conheça a Receita
+                            </a>
+                        </div>
+
+                        <!-- DOCE DE PINHÃO -->
+                        <div class="card card-prato">
+                            <h5 class="titulo-prato">DOCE DE PINHÃO</h5>
+                            <!-- Substituir "foto/imagem?? por Nome do Autor via ?????" -->
+                            <img src="src/assets/images/doce-de-pinhao.jpg" class="img-prato" alt="Doce de Pinhão"
+                                title="foto/imagem?? por Nome do Autor via ?????">
+                            <p class="descricao-prato">
+                                 Doce tradicional feito com pinhões, açúcar e água, muito apreciado na região. 
+                            </p>
+                            <a target="_blank"
+                                href="https://receitas.globo.com/tipos-de-prato/doces-e-sobremesas/doce-de-pinhao-53a593e64d3885169300003f.ghtml"
+                                class="btn btn-success text-white border border-success">
+                                <i class="bi bi-link-45deg"></i> Conheça a Receita
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chefs" class="secao-conteudo secao-chefs">
+            <div class="container">
+                <div class="caixa-conteudo">
+                    <h2 class="titulo-conteudo">CHEFS CONVIDADOS</h2>
+                    <p class="texto-conteudo">
+                        Quatro chefs convidados para o festival celebram a união do campo e da cidade na gastronomia:
+                        Ana Terra resgata tradições locais, Bento inova com ingredientes rústicos, Cora foca na
+                        sustentabilidade, e Dante explora a fusão de sabores regionais e internacionais. Cada um trará
+                        experiências únicas ao evento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="secao-conteudo secao-sobre">
+            <div class="container">
+                <div class="caixa-conteudo">
+                    <h2 class="titulo-conteudo">SOBRE NÓS</h2>
+                    <p class="texto-conteudo">
+                        O "Festival Gastronômico: Sabores do Campo à Cidade" celebra a união entre a produção local e a
+                        culinária urbana, valorizando ingredientes regionais e conectando produtores com consumidores.
+                        Sua missão é promover a cultura alimentar local, destacando a autenticidade e a diversidade da
+                        gastronomia da região.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="local-evento" class="secao-conteudo secao-local-evento">
+            <div class="container">
+                <div class="caixa-conteudo">
+                    <h2 class="titulo-conteudo">LOCAL DO EVENTO</h2>
+                    <p class="texto-conteudo">Rod. Dep. João Leopoldo Jacomel, 10454 - Vila Amélia, Pinhais - PR, CEP:
+                        83320-005.</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.0770071802303!2d-49.171548124610396!3d-25.43568887755823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcefc9df3738fb%3A0xca3225e08e92a88!2sRod.%20Dep.%20Jo%C3%A3o%20Leopoldo%20Jacomel%2C%2010454%20-%20Maria%20Antonieta%2C%20Pinhais%20-%20PR%2C%2083320-020!5e0!3m2!1spt-BR!2sbr!4v1746574220027!5m2!1spt-BR!2sbr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="regras" class="secao-conteudo secao-regras">
+            <div class="container">
+                <div class="caixa-conteudo">
+                    <h2 class="titulo-conteudo">REGRAS</h2>
+                    <ul class="lista-regras texto-conteudo">
+                        <li>Apresentação do ingresso obrigatória.</li>
+                        <li>Documento de identificação com foto pode ser solicitado.</li>
+                        <li>Menores de idade devem estar acompanhados dos pais ou responsáveis.</li>
+                        <li>Conduta respeitosa é esperada de todos.</li>
+                        <li>Seguir as orientações da equipe de segurança.</li>
+                        <li>Câmeras e celulares para uso pessoal são permitidos.</li>
+                        <li>Bolsas e mochilas podem ser inspecionadas.</li>
+                        <li>Comportamento agressivo ou desrespeitoso é proibido.</li>
+                        <li>Drogas ilícitas e armas são proibidas.</li>
+                        <li>A participação no festival implica na aceitação destas regras.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sessão Contato-->
+        <section id="contato" class="secao-conteudo secao-contato">
+            <div class="container">
+                <div class="caixa-conteudo contato-flex">
+
+                    <!-- Lado Esquerdo -->
+                    <div class="contato-info">
+                        <h2 class="titulo-contato">ENTRE EM CONTATO CONOSCO!</h2>
+
+                        <div class="info-contato texto-conteudo">
+                            <p><strong>E-mail:</strong> <span>FestivalGastronomicoCC@gmail.com</span></p>
+                            <p><strong>Telefone:</strong> <span>(42) 9 885672-0908</span></p>
+                            <p><strong>Redes Sociais:</strong> <span>@FestivalGastronomicoCC</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Lado Direito -->
+                    <div class="formulario-area">
+                        <form class="formulario-contato">
+                            <input type="text" name="nome" placeholder="Nome:" required>
+                            <input type="email" name="email" placeholder="E-mail:" required>
+                            <textarea name="mensagem" placeholder="Mensagem:" rows="4" required></textarea>
+                            <button type="submit">ENVIAR</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+
+            <div class="rodape-info">
+                <p><strong>Festival Sabores do Campo à Cidade</strong></p>
+                <p>Rua das Delícias, 123 – Cidade Gastronômica</p>
+                <p>Telefone: (42) 9 8856-7209</p>
+                <p>Email: <a href="mailto:FestivalGastronomicoCC@gmail.com">FestivalGastronomicoCC@gmail.com</a></p>
+            </div>
+
+            <div class="rodape-social">
+                <p><strong>Siga nas redes sociais:</strong></p>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a><br>
+                <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+
+            <div class="rodape-legal">
+                <p>© 2025 Festival Sabores do Campo à Cidade</p>
+
+                <!-- O design visual foi desenvolvido por CHIARA VIEIRA DOS SANTOS no Figma, com base nas ideias que imaginei e compartilhei com ela. 
+Durante o processo, ajustamos o layout juntos, considerando sugestões dela para melhorar a aparência e a experiência visual do site. 
+Reforço que toda a codificação foi feita exclusivamente por mim, inclusive as adaptações e ajustes no design, respeitando o caráter individual do projeto, conforme solicitado no edital. -->
+                <p><a href="atribuicoes.html" target="_blank" rel="noopener noreferrer">REFERÊNCIAS E ATRIBUOÇÕES</a>
+                </p>
+                <p>Imagem de lenha por <a href="https://pt.vecteezy.com/vetor-gratis/fogueira" target="_blank"
+                        rel="noopener noreferrer">Fogueira Vetores - Vecteezy</a></p>
+
+            </div>
+    </footer>
+
+    <script src="src/assets/js/menu.js"></script>
+    <script src="src/assets/js/cronometro.js"></script>
+    <script src="src/assets/js/acessibilidade.js"></script>
+    <script src="src/assets/js/vlibras.js"></script>
+
+
+</body>
+
+</html>

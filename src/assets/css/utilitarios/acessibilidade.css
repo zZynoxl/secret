@@ -1,0 +1,223 @@
+
+/* Menu de acessibilidade  inspirado na trilha: https://cursos.alura.com.br/course/acessibilidade-web-melhorando-experiencia-usuario */
+.menu-acessibilidade {
+  position: fixed;
+  top: calc(var(--espacamento-grande) * 5);
+  right: var(--espacamento-grande);
+  z-index: 100;
+}
+
+.btn-acessibilidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tamanho-botao);
+  height: var(--tamanho-botao);
+  background-color: var(--cor-azul);
+  color: var(--cor-contraste-branco);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--sombra-leve);
+  transition: all 0.3s ease;
+}
+
+.btn-acessibilidade:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-contraste-fundo);
+  border: 2px solid var(--cor-azul);
+  transform: scale(1.05);
+}
+
+.btn-acessibilidade.rotacionado {
+  transform: rotate(180deg);
+}
+
+.opcoes-acessibilidade {
+  display: none;
+  flex-direction: column;
+  gap: var(--espacamento-pequeno);
+  background-color: var(--cor-contraste-branco);
+  padding: var(--espacamento-medio);
+  border-radius: var(--espacamento-pequeno);
+  box-shadow: var(--sombra-media);
+  margin-top: var(--espacamento-pequeno);
+}
+
+.opcoes-acessibilidade.ativo {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+  background: var(--cor-azul);
+}
+
+
+.btn-opcao {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-pequeno);
+  padding: var(--espacamento-pequeno) var(--espacamento-medio);
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: calc(var(--espacamento-pequeno) / 2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-opcao:hover {
+  background-color: var(--cor-hover);
+}
+
+.btn-opcao i {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* --- Estilos para o modo Alto Contraste --- */
+
+.alto-contraste {
+  background-color: var(--cor-contraste-fundo);
+  color: var(--cor-contraste-branco);
+  background-image: none;
+}
+
+.alto-contraste .opcoes-acessibilidade.ativo {
+  border: 1px solid var(--cor-contraste-destaque);
+  background: var(--cor-contraste-fundo);
+}
+
+.alto-contraste body {
+  background-color: var(--cor-contraste-fundo);
+  background-image: none;
+  color: var(--cor-contraste-branco);
+}
+
+.alto-contraste .header,
+.alto-contraste .footer {
+  background-color: var(--cor-contraste-fundo);
+  color: var(--cor-contraste-destaque);
+  border-color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste a,
+.alto-contraste .header-link,
+.alto-contraste .btn-opcao {
+  color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste .header-list {
+  background-color: var(--cor-contraste-fundo);
+  border-color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste .header-list-item a {
+  color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste .header-list-item a:hover {
+  color: var(--cor-contraste-branco);
+}
+
+.alto-contraste .btn-opcao {
+  background-color: var(--cor-contraste-fundo);
+  border-color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste .btn-acessibilidade {
+  background-color: var(--cor-contraste-destaque);
+  color: var(--cor-contraste-fundo);
+}
+
+.alto-contraste .btn-opcao:hover {
+  background-color: var(--cor-contraste-fundo);
+  color: var(--cor-contraste-branco);
+}
+
+.alto-contraste .caixa-conteudo,
+.alto-contraste .caixa-sabores {
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-contraste-destaque);
+  border: 1px solid var(--cor-contraste-borda);
+}
+
+.alto-contraste .titulo-conteudo,
+.alto-contraste .titulo-sabores {
+  background-color: var(--cor-contraste-fundo);
+  border: 1px solid var(--cor-contraste-borda);
+  color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste .texto-conteudo,
+.alto-contraste .descricao-prato {
+  color: var(--cor-fundo-claro);
+}
+
+.alto-contraste .card-prato {
+  background: var(--cor-fundo-escuro);
+}
+
+.alto-contraste .titulo-prato {
+  color: var(--cor-contraste-destaque);
+}
+
+.alto-contraste .secao-contato {
+  background-color: var(--cor-contraste-fundo);
+}
+
+.alto-contraste .formulario-contato {
+  background: var(--cor-fundo-escuro);
+}
+
+.alto-contraste .formulario-contato input,
+.alto-contraste .formulario-contato textarea {
+  background-color: var(--cor-fundo-escuro);
+  border: 1px solid var(--cor-contraste-borda);
+  color: var(--cor-contraste-branco);
+}
+
+.alto-contraste .formulario-contato button {
+  background-color: var(--cor-contraste-fundo);
+  color: var(--cor-contraste-branco);
+  border: 1px solid var(--cor-contraste-borda);
+}
+
+.alto-contraste .formulario-contato button:hover {
+  background-color: var(--cor-contraste-destaque);
+  color: var(--cor-contraste-fundo);
+}
+
+.alto-contraste .rodape {
+  background-color: var(--cor-contraste-fundo);
+  color: var(--cor-contraste-branco);
+}
+
+.alto-contraste .contador-de-tempo {
+  background-color: var(--cor-fundo-escuro);
+  border: 1px solid var(--cor-contraste-borda);
+}
+
+.alto-contraste #simular {
+  background-color: var(--cor-contraste-fundo);
+  color: var(--cor-contraste-branco);
+  border: 1px solid var(--cor-contraste-borda);
+}
+
+.alto-contraste #simular:hover {
+  background-color: var(--cor-contraste-destaque);
+  color: var(--cor-contraste-fundo);
+}
+
+.alto-contraste .contador-de-tempo h2,
+.alto-contraste .contador-de-tempo h2 span,
+.alto-contraste .contador-de-tempo h3,
+.alto-contraste .counter-digit-number,
+.alto-contraste .counter-digit-label {
+  color: var(--cor-contraste-branco);
+}
+
+.alto-contraste .lista-regras li:hover {
+  background-color: var(--cor-contraste-destaque); 
+  color: var(--cor-fundo-escuro);
+}
+

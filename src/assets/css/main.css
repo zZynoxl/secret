@@ -1,0 +1,35 @@
+/* importar todos os css*/
+@import url(../css/base/reset.css);
+@import url(../css/base/variaveis.css);
+@import url(../css/utilitarios/acessibilidade.css);
+@import url(../css/layout/header.css);
+@import url(../css/layout/banner.css);
+@import url(../css/componentes/cronometro.css);
+@import url(../css/componentes/conteudo.css);
+@import url(../css/componentes/cards-pratos.css);
+@import url(../css/componentes/lista-regras.css);
+@import url(../css/componentes/contato.css);
+@import url(../css/layout/footer.css);
+@import url(../css/layout/mediaqueries.css);
+@import url(../css/layout/keyframes.css);
+
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    padding-top: 80px; 
+}
+
+body {
+    background-image: url('../images/fundo1.png'); 
+    background-size: 100%;  
+    background-repeat: repeat-y; 
+    background-attachment: fixed; 
+    background-position: top center; 
+    margin: 0;
+    padding: 0;
+}
